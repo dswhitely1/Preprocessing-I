@@ -145,10 +145,17 @@ body {
 html {
 	font-size: 62.5%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
 .container {
 	width: 100%;
 	margin: auto;
-	border: 1px solid red;
 	@media (min-width: 800px) {
 		max-width: 880px;
 	}
@@ -255,6 +262,7 @@ header {
 			flex-direction: row;
 			.text-content {
 				width: 80%;
+				padding: 0 1%;
 			}
 			p,
 			li {
@@ -264,18 +272,37 @@ header {
 	}
 	.bottom-content {
 		table {
-			width: 90%;
+			display: table;
+			width: 100%;
 			text-align: left;
 			font-size: 1.2rem;
+			border-spacing: 20px;
+			border-collapse: collapse;
+			border-top: 1px solid @ctaColor;
 			@media (min-width: 800px) {
 				font-size: 1.6rem;
 			}
+			th {
+				font-weight: 700;
+				padding: 10px 0;
+			}
+			tr {
+				&:nth-child(even) {
+					background-color: @ctaColor;
+				}
+			}
+			td {
+				padding: 10px 0;
+			}
 		}
-		tr {
-			padding: 5%;
-		}
-		th {
-			font-weight: 700;
-		}
+	}
+}
+footer {
+	background: @bgColor;
+	color: @buttonTextColor;
+	text-align: center;
+	padding: 10% 0;
+	p {
+		font-size: 2rem;
 	}
 }
