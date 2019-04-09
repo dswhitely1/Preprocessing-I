@@ -1,0 +1,36 @@
+header {
+	padding: 20px 0;
+
+	@media @phone {
+		padding: 0;
+	}
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+
+		@media @phone {
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			border-top: 1px solid @textColor;
+		}
+
+		a {
+			font-size: @fontSize;
+			margin-right: 5%;
+
+			@media @phone {
+				width: 100%;
+				font-size: @fontSize + 0.4;
+				padding: 10px 0;
+				border-bottom: 1px solid @textColor;
+				margin-right: 0;
+
+				&:hover {
+					background-color: @ctaColor;
+				}
+			}
+		}
+	}
+}

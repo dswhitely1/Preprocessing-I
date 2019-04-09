@@ -126,16 +126,15 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
 }
 html,
 body {
   height: 100%;
-}
-html {
-  font-size: 62.5%;
 }
 h1,
 h2,
@@ -145,67 +144,78 @@ h5,
 h6 {
   font-weight: 700;
 }
+p {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+button {
+  color: white;
+  background-color: gray;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: gray;
+}
 .container {
   width: 100%;
   margin: auto;
+  max-width: 880px;
 }
-@media (min-width: 800px) {
-  .container {
-    max-width: 880px;
-  }
+a:hover {
+  text-decoration: underline;
 }
-@media (min-width: 500px) {
+header {
+  padding: 20px 0;
+}
+@media (max-width: 500px) {
   header {
-    padding: 20px 0;
+    padding: 0;
   }
 }
 header nav {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  border-top: 1px solid black;
+  justify-content: flex-end;
 }
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   header nav {
-    justify-content: flex-end;
-    border: none;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid black;
   }
 }
 header nav a {
-  font-size: 2rem;
-  padding: 10px 0;
-  border-bottom: 1px solid black;
+  font-size: 1.6rem;
+  margin-right: 5%;
 }
-header nav a:hover {
-  text-decoration: underline;
-  background: gray;
-}
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   header nav a {
-    margin-right: 5%;
-    font-size: 1.6rem;
-    border: none;
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    margin-right: 0;
   }
   header nav a:hover {
-    background: transparent;
+    background-color: #e6e6e6;
   }
-}
-.space-between-elements {
-  margin-bottom: 20px;
 }
 .cta {
   background: #e6e6e6;
   padding: 10% 5%;
 }
 .cta h1 {
-  font-size: 3rem;
+  font-size: 6rem;
   margin-bottom: 20px;
 }
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .cta h1 {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 }
 .cta h4 {
@@ -213,96 +223,10 @@ header nav a:hover {
   margin-bottom: 20px;
 }
 .cta p {
-  font-size: 1.4rem;
   margin-bottom: 20px;
 }
-@media (min-width: 500px) {
-  .cta p {
-    font-size: 1.6rem;
-  }
-}
 .cta button {
-  color: white;
-  background-color: gray;
   border-radius: 10px;
   padding: 1% 2%;
   border: none;
-  cursor: pointer;
-}
-.cta button:hover {
-  background-color: #e6e6e6;
-  color: gray;
-}
-.main-content {
-  padding: 5%;
-}
-.main-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-.main-content h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-}
-.main-content p,
-.main-content li {
-  font-size: 1.4rem;
-}
-.main-content .top-content {
-  display: flex;
-  flex-direction: column;
-}
-.main-content .top-content .text-content {
-  margin-bottom: 5%;
-}
-.main-content .top-content li {
-  border: 1px solid #e6e6e6;
-  padding: 2%;
-}
-@media (min-width: 500px) {
-  .main-content .top-content {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .main-content .top-content .text-content {
-    width: 80%;
-    padding: 0 1%;
-  }
-  .main-content .top-content p,
-  .main-content .top-content li {
-    font-size: 1.6rem;
-  }
-}
-.main-content .bottom-content table {
-  display: table;
-  width: 100%;
-  text-align: left;
-  font-size: 1.2rem;
-  border-spacing: 20px;
-  border-collapse: collapse;
-  border-top: 1px solid #e6e6e6;
-}
-@media (min-width: 800px) {
-  .main-content .bottom-content table {
-    font-size: 1.6rem;
-  }
-}
-.main-content .bottom-content table th {
-  font-weight: 700;
-  padding: 10px 0;
-}
-.main-content .bottom-content table tr:nth-child(even) {
-  background-color: #e6e6e6;
-}
-.main-content .bottom-content table td {
-  padding: 10px 0;
-}
-footer {
-  background: gray;
-  color: white;
-  text-align: center;
-  padding: 10% 0;
-}
-footer p {
-  font-size: 2rem;
 }

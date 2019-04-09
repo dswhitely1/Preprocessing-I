@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+p {
+	font-size: @fontSize;
+
+	@media @phone {
+		font-size: @fontSize - 0.2;
+	}
+}
+
+button {
+	color: @buttonTextColor;
+	background-color: @bgColor;
+	cursor: pointer;
+
+	&:hover {
+		background-color: @buttonTextColor;
+		color: @bgColor;
+	}
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	max-width: 880px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
