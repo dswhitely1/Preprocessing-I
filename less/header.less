@@ -1,34 +1,81 @@
 header {
-	padding: 20px 0;
+	width: 100%;
 
-	@media @phone {
-		padding: 0;
+	.banner {
+		.flex(center, center);
+		flex-flow: column nowrap;
+		padding: 35px 0;
+		background-color: @color-primary-1;
 	}
 
-	nav {
-		display: flex;
-		justify-content: flex-end;
+	h1,
+	h4 {
+		color: @color-secondary-1-1;
+	}
 
-		@media @phone {
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-			border-top: 1px solid @textColor;
+	h1 {
+		font-size: @fontSize * 6;
+
+		@media (max-width: 680px) {
+			font-size: @fontSize * 5;
 		}
 
-		a {
-			font-size: @fontSize;
-			margin-right: 5%;
+		@media (max-width: 585px) {
+			font-size: @fontSize * 4;
+		}
+
+		@media @phone {
+			font-size: @fontSize * 3;
+		}
+	}
+
+	h4 {
+		font-size: @fontSize * 3.5;
+
+		@media (max-width: 680px) {
+			font-size: @fontSize * 2.9;
+		}
+
+		@media (max-width: 570px) {
+			font-size: @fontSize * 2.3;
+		}
+
+		@media @phone {
+			font-size: @fontSize * 1.8;
+		}
+	}
+
+	.navigation {
+		.flex(center, center);
+		padding: 10px 0;
+		background-color: @color-secondary-2-1;
+		@media @phone {
+			background-color: transparent;
+			padding: 0;
+			border-top: 1px solid @color-secondary-2-0;
+		}
+		nav {
+			.flex(space-between, center);
+			width: 75%;
 
 			@media @phone {
+				flex-direction: column;
 				width: 100%;
-				font-size: @fontSize + 0.4;
-				padding: 10px 0;
-				border-bottom: 1px solid @textColor;
-				margin-right: 0;
+			}
 
-				&:hover {
-					background-color: @ctaColor;
+			a {
+				color: @color-secondary-1-1;
+				@media @phone {
+					font-size: @fontSize + 0.4;
+					padding: 10px;
+					width: 100%;
+					text-align: center;
+					border-bottom: 1px solid @color-secondary-2-0;
+					color: @color-secondary-1-4;
+					&:hover {
+						background-color: @color-secondary-2-1;
+						color: @color-secondary-1-1;
+					}
 				}
 			}
 		}

@@ -10,41 +10,34 @@ html,
 body {
 	height: 100%;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+	font-size: @fontSize;
+	font-family: 'Amatic SC', sans-serif;
 	font-weight: 700;
 }
-
-p {
+p,
+li {
 	font-size: @fontSize;
-
-	@media @phone {
-		font-size: @fontSize - 0.2;
-	}
+	font-family: 'Ubuntu', monospace;
 }
-
-button {
-	color: @buttonTextColor;
-	background-color: @bgColor;
-	cursor: pointer;
-
+a {
+	font-family: 'Fira Mono', monospace;
+	font-size: @fontSize;
 	&:hover {
-		background-color: @buttonTextColor;
-		color: @bgColor;
+		text-decoration: underline;
 	}
 }
-
 .container {
+	max-width: 880px;
 	width: 100%;
 	margin: auto;
-	max-width: 880px;
-}
 
-a:hover {
-	text-decoration: underline;
+	@media (min-width: 880px) {
+		box-shadow: 5px 0 25px 1px @color-secondary-2-3;
+	}
 }
