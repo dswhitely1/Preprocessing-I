@@ -2,8 +2,7 @@ header {
 	width: 100%;
 
 	.banner {
-		.flex(center, center);
-		flex-flow: column nowrap;
+		.flex-with-flow(center, center, column, nowrap);
 		padding: 35px 0;
 		background-color: @color-primary-1;
 	}
@@ -14,34 +13,34 @@ header {
 	}
 
 	h1 {
-		font-size: @fontSize * 6;
+		.fontSizeHeader(6);
 
 		@media (max-width: 680px) {
-			font-size: @fontSize * 5;
+			.fontSizeHeader(5);
 		}
 
 		@media (max-width: 585px) {
-			font-size: @fontSize * 4;
+			.fontSizeHeader(4);
 		}
 
 		@media @phone {
-			font-size: @fontSize * 3;
+			.fontSizeHeader(3);
 		}
 	}
 
 	h4 {
-		font-size: @fontSize * 3.5;
+		.fontSizeHeader(3.5);
 
 		@media (max-width: 680px) {
-			font-size: @fontSize * 2.9;
+			.fontSizeHeader(2.9);
 		}
 
 		@media (max-width: 570px) {
-			font-size: @fontSize * 2.3;
+			.fontSizeHeader(2.3);
 		}
 
 		@media @phone {
-			font-size: @fontSize * 1.8;
+			.fontSizeHeader(1.8);
 		}
 	}
 
@@ -66,7 +65,7 @@ header {
 			a {
 				color: @color-secondary-1-1;
 				@media @phone {
-					font-size: @fontSize + 0.4;
+					.fontSizeAdd(0.4);
 					padding: 10px;
 					width: 100%;
 					text-align: center;

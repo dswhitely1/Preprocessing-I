@@ -3,3 +3,25 @@
 	justify-content: @justify;
 	align-items: @align;
 }
+
+.flex-with-flow(@justify, @align, @direction, @wrap) {
+	.flex(@justify, @align);
+	flex-flow: @direction @wrap;
+}
+
+.mobile(@direction, @wrapme, @justify) {
+	flex-flow: @direction @wrapme;
+	justify-content: @justify;
+}
+
+.fontSizeSubtract(@sizeChange) {
+	font-size: @fontSize - @sizeChange;
+}
+
+.fontSizeHeader(@sizeChange) {
+	font-size: @fontSize * @sizeChange;
+}
+
+.fontSizeAdd(@sizeChange) {
+	font-size: @fontSize + @sizeChange;
+}

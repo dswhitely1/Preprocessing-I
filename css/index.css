@@ -350,7 +350,7 @@ h6 {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  flex-direction: column;
+  flex-flow: column nowrap;
   width: 30%;
 }
 .right-content .first-child {
@@ -365,7 +365,7 @@ h6 {
   margin-right: 5%;
 }
 .right-content h6 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 @media (max-width: 500px) {
   .right-content {
