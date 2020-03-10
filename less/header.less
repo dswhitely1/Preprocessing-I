@@ -1,0 +1,82 @@
+header {
+	width: 100%;
+
+	.banner {
+		.flex-with-flow(center, center, column, nowrap);
+		padding: 35px 0;
+		background-color: @color-primary-1;
+	}
+
+	h1,
+	h4 {
+		color: @color-secondary-1-1;
+	}
+
+	h1 {
+		.fontSizeHeader(6);
+
+		@media (max-width: 680px) {
+			.fontSizeHeader(5);
+		}
+
+		@media (max-width: 585px) {
+			.fontSizeHeader(4);
+		}
+
+		@media @phone {
+			.fontSizeHeader(3);
+		}
+	}
+
+	h4 {
+		.fontSizeHeader(3.5);
+
+		@media (max-width: 680px) {
+			.fontSizeHeader(2.9);
+		}
+
+		@media (max-width: 570px) {
+			.fontSizeHeader(2.3);
+		}
+
+		@media @phone {
+			.fontSizeHeader(1.8);
+		}
+	}
+
+	.navigation {
+		.flex(center, center);
+		padding: 10px 0;
+		background-color: @color-secondary-2-1;
+		@media @phone {
+			background-color: transparent;
+			padding: 0;
+			border-top: 1px solid @color-secondary-2-0;
+		}
+		nav {
+			.flex(space-between, center);
+			width: 75%;
+
+			@media @phone {
+				flex-direction: column;
+				width: 100%;
+			}
+
+			a {
+				color: @color-secondary-1-1;
+				@media @phone {
+					.fontSizeAdd(0.4);
+					padding: 10px;
+					width: 100%;
+					text-align: center;
+					border-bottom: 1px solid @color-secondary-2-0;
+					color: @color-secondary-1-4;
+					&:hover {
+						background-color: @color-secondary-2-1;
+						color: @color-secondary-1-1;
+					}
+				}
+			}
+		}
+	}
+}
